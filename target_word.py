@@ -1,19 +1,10 @@
-
-def find_word_positions(sentence, target_word):
-    words = sentence.split()
-    positions = []
-    for i, word in enumerate(words, 0):
-        if word == target_word:
-            positions.append(i)
-    if positions:
-        return positions
-    else:
-        return False
-sentence = input("Enter a string of words: ")
-target_word = input("Enter the target word: ")
-result = find_word_positions(sentence, target_word)
-
-if result:
-    print(result)
-else:
-    print(False)
+txt=input("Enter the string to be checked:")
+target_word=input("enter the target word:")
+x=txt.split(" ")
+j=0
+index_pos=[]
+for i in x:
+    if i==target_word:
+        index_pos.append(j)
+    j=j+1
+print(index_pos)
